@@ -3,9 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
-/*navegacao em tds as paginas*/
-
 /*paleta de cores*/
 :root {
     --laranja-primario: #ff6a00;
@@ -14,10 +13,7 @@
     --cor-preto: #0b0b0f;
 }
 
-* {
-    user-select: none;
-}
-
+/*navbar*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -34,14 +30,14 @@
 
     border-bottom: 1px solid rgba(255, 106, 0, 0.15);
 }
-
+/*logo*/
 .logo-text {
     font-size: 22px;
     font-weight: 700;
     color: var(--cor-branco);
     text-shadow: 0 0 10px rgba(255,106,0,0.4);
 }
-
+/*links*/
 .navbar nav a {
     margin: 0 12px;
     text-decoration: none;
@@ -53,7 +49,7 @@
 .navbar nav a:hover {
     color: var(--laranja-primario);
 }
-
+/*botao solucao*/
 .btn-nav {
     background: transparent;
     border: 1px solid var(--laranja-primario);

@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sentra</title>
+    <title>Página Inicial / Sentra</title>
 
-    <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/scripts.js" defer></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -24,97 +24,99 @@
             <a href="./paginas/pag-equipe.html">Equipe</a>
         </nav>
 
-        <a href="./paginas/pag-solucao.html" class="btn-nav">Agendar Demonstração</a>
+        <a href="./paginas/pag-solucao.html" class="btn-nav">Solução</a>
     </header>
+    <main>
+        <section class="hero">
+            <div class="parallax-layer layer-bg"></div>
 
-    <section class="hero">
-        <div class="parallax-layer layer-bg"></div>
+            <div class="hero-text parallax" data-speed="2">
+                <p class="tag">INTELIGÊNCIA ORBITAL CONTRA INCÊNDIOS</p>
 
-        <div class="hero-text parallax" data-speed="2">
-            <p class="tag">INTELIGÊNCIA ORBITAL CONTRA INCÊNDIOS</p>
+                <h1>
+                    ALERTA DE INCÊNDIOS AUTOMATIZADO<br />
+                    <span>(SENTRA)</span>
+                </h1>
 
-            <h1>
-                ALERTA DE INCÊNDIOS AUTOMATIZADO<br />
-                <span>(SENTRA)</span>
-            </h1>
+                <p class="desc">
+                    Monitoramento via satélite em tempo real, inteligência de dados e
+                    alertas para prevenção de incêndios florestais.
+                </p>
 
-            <p class="desc">
-                Monitoramento via satélite em tempo real, inteligência de dados e
-                alertas para prevenção de incêndios florestais.
-            </p>
+                <div class="actions">
+                    <button class="btn-primary">Explorar Plataforma</button>
 
-            <div class="actions">
-                <button class="btn-primary">Explorar Plataforma</button>
-
-                <button class="btn-secondary">Ver Tecnologia</button>
-            </div>
-        </div>
-
-        <div class="hero-right">
-            <div class="hero-media">
-                <img src="assets/astronauta.webp" alt="Astronauta em órbita" />
-            </div>
-
-            <div class="heat-widget parallax" id="heat-widget">
-                <div class="heat-header">
-                    🔥 Focos de calor (24h)
-
-                    <span id="heat-time"> atualizando... </span>
-                </div>
-
-                <div class="heat-body">
-                    <div class="heat-number" id="heat-count">0</div>
-
-                    <div class="heat-label">detecções recentes</div>
+                    <button class="btn-secondary">Ver Tecnologia</button>
                 </div>
             </div>
 
-            <section class="stats">
-                <div class="stat-item">
-                    <div class="icon">🛰</div>
+            <div class="hero-right">
+                <div class="hero-media">
+                    <img src="assets/astronauta.webp" alt="Astronauta em órbita" />
+                </div>
 
-                    <div class="stat-info">
-                        <p>SATÉLITES ATIVOS</p>
-                        <span>18</span>
+                <div class="heat-widget parallax" id="heat-widget">
+                    <div class="heat-header">
+                        🔥 Focos de calor (24h)
+
+                        <span id="heat-time"> atualizando... </span>
+                    </div>
+
+                    <div class="heat-body">
+                        <div class="heat-number" id="heat-count">0</div>
+
+                        <div class="heat-label">detecções recentes</div>
                     </div>
                 </div>
 
-                <div class="divider"></div>
+                <section class="stats">
+                    <div class="stat-item">
+                        <div class="icon">🛰</div>
 
-                <div class="stat-item">
-                    <div class="icon">◎</div>
-
-                    <div class="stat-info">
-                        <p>ÁREAS EM RISCO</p>
-                        <span>43</span>
+                        <div class="stat-info">
+                            <p>SATÉLITES ATIVOS</p>
+                            <span>18</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="divider"></div>
+                    <div class="divider"></div>
 
-                <div class="stat-item">
-                    <div class="icon">🔥</div>
+                    <div class="stat-item">
+                        <div class="icon">◎</div>
 
-                    <div class="stat-info">
-                        <p>INCÊNDIOS DETECTADOS</p>
-                        <span>127</span>
+                        <div class="stat-info">
+                            <p>ÁREAS EM RISCO</p>
+                            <span>43</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="divider"></div>
+                    <div class="divider"></div>
 
-                <div class="stat-item">
-                    <div class="icon">◔</div>
+                    <div class="stat-item">
+                        <div class="icon">🔥</div>
 
-                    <div class="stat-info">
-                        <p>TEMPO DE ALERTA</p>
-                        <span>30s</span>
+                        <div class="stat-info">
+                            <p>INCÊNDIOS DETECTADOS</p>
+                            <span>127</span>
+                        </div>
                     </div>
-                </div>
-                <a href="#" class="stats-link"> VER TODOS OS DADOS → </a>
-            </section>
-        </div>
-    </section>
+
+                    <div class="divider"></div>
+
+                    <div class="stat-item">
+                        <div class="icon">◔</div>
+
+                        <div class="stat-info">
+                            <p>TEMPO DE ALERTA</p>
+                            <span>30s</span>
+                        </div>
+                    </div>
+                    <a href="#" class="stats-link"> VER TODOS OS DADOS → </a>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
 </body>
 
 </html>
