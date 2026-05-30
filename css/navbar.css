@@ -12,7 +12,7 @@
     --laranja-primario: #ff6a00;
     --cor-branco: #fff;
     --cor-cinza: #aaa;
-    --cor-preto: #0b0b0f;
+    --cor-bg: #0b0b0f;
 }
 
 /*navbar*/
@@ -67,12 +67,18 @@
     padding: 10px 16px;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.6s;
     text-decoration: none;
 }
 
-.btn-nav:hover {
+.btn-nav:hover, .btn-nav--highlight {
     background: var(--laranja-primario);
     color: var(--cor-branco);
-    box-shadow: 0 0 15px rgba(255,106,0,0.5);
+    box-shadow: 0 0 15px rgba(255,106,0,0.3);
+}
+
+.navbar:has(.nav-link:not(.btn-nav--highlight):hover) .btn-nav--highlight { /*na navbar, caso o evento hover aconteça fora do item text-highlight*/
+    background: transparent;
+    color: var(--laranja-primario);
+    box-shadow: none;
 }
