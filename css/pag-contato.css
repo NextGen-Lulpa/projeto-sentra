@@ -225,7 +225,7 @@ body {
 .input-message::placeholder, .form-input::placeholder {
     font-family: 'Inter', sans-serif;
 }
-.input-message:focus, .form-input:focus {
+.input-message:focus, .form-input:focus { /*quando selecionado*/
     text-shadow: 0 0 30px rgba(255, 94, 0, 0.2);
     outline: 1px solid var(--laranja-primario);
 }
@@ -264,12 +264,13 @@ body {
     color: var(--cor-branco);
     text-align: center;
 }
-@media (max-width:1315px) {
+/*responsividade*/
+@media (max-width:1315px) { /*desktop*/
     .contact-card {
         width: 80%;
     }
 }
-@media (max-width: 992px) {
+@media (max-width: 992px) { /*desktop*/
     .left-side {
         width: 45%;
         margin: 120px 20px;
@@ -304,13 +305,13 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /*tablet*/
     .section-contact {
         flex-direction: column;
     }
     .left-side {
         width: 90%;
-        margin: 120px auto 30px;
+        margin: 120px auto 30px; /*cima, laterais, baixo*/
     }
     .form {
         width: 90%;
@@ -318,7 +319,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { /*mobile*/
     .left-side, .form {
         width: 75%;
     }
