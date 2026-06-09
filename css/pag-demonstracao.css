@@ -689,24 +689,6 @@ body {
 
 /* tablet */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 15px;
-        gap: 15px;
-    }
-
-    .navbar nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .nav-link {
-        margin: 0;
-        font-size: 14px;
-    }
 
     .demo-container {
         margin-top: 220px;
