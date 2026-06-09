@@ -733,7 +733,26 @@ body {
         flex: 1 1 calc(50% - 1.5rem);
     }
 }
+/* correcao de nav aside do dashboard */
+@media (min-width: 495px) and (max-width: 604px) {
+    .dash-sidebar {
+        justify-content: flex-start;
+        gap: 15px;
+    }
 
+    .dash-nav {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .dashboard-link {
+        white-space: nowrap;
+        flex: 0 0 auto;
+        font-size: 0.75rem;
+        padding: 0.5rem 0.8rem;
+        display: inline-block;
+    }
+}
 /* mobile */
 @media (max-width: 480px) {
     .demo-title {
