@@ -1,9 +1,78 @@
-@import url("navbar.css");
+@import url('navbar.css');
+@import url('styles.css');
+
+
+:root {
+    --color-bg: #0B0D11;
+    --color-panel: #13151A;
+    --color-card: #1A1D24;
+    --color-border: #2A2E39;
+    --color-text: #E0E2E6;
+    --color-subtitle: #8A8D93;
+    --color-highlight: #D96013;
+    --color-danger: #E84545;
+    --color-success: #28A745;
+}
 
 body {
-font-family: "Inter", sans-serif;
-background: linear-gradient(45deg, var(--cor-bg), #111116);
-color: var(--cor-branco);
-font-size: 16px;
-overflow: hidden;
+    overflow: hidden;
+}
+
+.demo-container {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 1600px;
+    margin: 100px 300px;
+    color: var(--color-text);
+}
+
+/* esquerda - info*/
+.demo-info {
+    flex: 0 0 350px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.demo-tag {
+    font-size: 15px;
+    color: var(--color-highlight);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 18px rgba(255, 94, 0, 0.8);
+}
+
+.demo-title {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.demo-subtitle{
+    color: var(--color-subtitle);
+    font-size: 18px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.demo-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+.features-list {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.text-highlight {
+    text-shadow: 0 0 18px rgba(255, 94, 0, 0.4);
 }
