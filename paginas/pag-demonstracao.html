@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/pag-demonstracao.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <script src="../js/pag-demonstracao.js" defer></script>
+    <script src="../js/navbar.js" defer></script>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
             <img src="../assets/logotipo-sentra.webp" alt="Logotipo Sentra" class="logo">
         </div>
 
-        <nav>
+        <nav class="navbar-links" id="navbarLinks">
             <a href="../index.html" class="nav-link">Página Inicial</a>
             <a href="./pag-sobre.html" class="nav-link">Sobre</a>
             <a href="./pag-faq.html" class="nav-link">FAQ</a>
@@ -27,6 +28,7 @@
         </nav>
 
         <a href="./pag-demonstracao.html" class="btn-nav btn-nav--highlight">Demonstração</a>
+        <button class="hamburger" id="hamburger"></button>
     </header>
     <!-- conteudo esquerda -->
     <main class="demo-container">
@@ -53,115 +55,281 @@
                     <h2 class="demo-name">Sentra</h2>
                 </div>
                 <nav class="dash-nav">
-                    <a href="#" class="dashboard-link active"><i class="fa-solid fa-border-all"></i> Dashboard Geral</a>
-                    <a href="#" class="dashboard-link"><i class="fa-solid fa-file"></i> Relatórios</a>
-                    <a href="#" class="dashboard-link"><i class="fa-solid fa-arrow-rotate-left"></i> Histórico</a>
+                    <a href="#" class="dashboard-link active" data-panel="dashboard">
+                        <i class="fa-solid fa-border-all"></i> Dashboard Geral
+                    </a>
+                    <a href="#" class="dashboard-link" data-panel="history">
+                        <i class="fa-solid fa-arrow-rotate-left"></i> Histórico
+                    </a>
                 </nav>
             </div>
             <!-- conteúdo principal dashboard -->
             <div class="dash-main">
-                <header class="dash-header">
-                    <div class="header-left">
-                        <h2>VISÃO GERAL</h2>
-                        <span class="update-time"><span class="dot"></span> Última atualização: Agora</span>
+    <section class="dash-panel active-panel" id="dashboardPanel">
+        <header class="dash-header">
+            <div class="header-left">
+                <h2>VISÃO GERAL</h2>
+                <span class="update-time"><span class="dot"></span> Última atualização: Agora</span>
+            </div>
+        </header>
+
+        <div class="dash-content">
+            <div class="dash-map-container">
+                <div class="dash-map">
+                    <img src="../assets/mapa-brasil.png" alt="Mapa do Brasil" class="map-bg">
+                </div>
+            </div>
+
+            <div class="dash-right">
+                <div class="dash-card">
+                    <div class="card-header">
+                        <h3 class="dash-title">RISCO ATUAL</h3>
+                        <i class="fa-solid fa-sort-up text-muted"></i>
                     </div>
-                </header>
-
-                <div class="dash-content">
-                    <!-- mapa -->
-                    <div class="dash-map-container">
-                        <div class="dash-map">
-                            <img src="../assets/mapa-brasil.png" alt="Mapa do Brasil" class="map-bg">
-                        </div>
-                    </div>
-                    <!-- direita cards -->
-                    <div class="dash-right">
-                        <div class="dash-card">
-                            <div class="card-header">
-                                <h3 class="dash-title">RISCO ATUAL</h3>
-                                <i class="fa-solid fa-sort-up text-muted"></i>
-                            </div>
-                            <h2 class="text-danger text-large">ALTO</h2>
-                            <p class="subtitle">Probabilidade de propagação</p>
-                            <div class="risk-meter">
-                                <span class="percentage">78%</span>
-                                <div class="meter-bar">
-                                    <div class="meter-fill">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="dash-card">
-                            <div class="card-header">
-                                <h3 class="dash-title">ALERTAS ATIVOS</h3>
-                                <i class="fa-solid fa-bell text-muted"></i>
-                            </div>
-                            <h2 class="text-large">27</h2>
-                            <p class="subtitle">+5 novos alertas</p>
-                        </div>
-
-                        <div class="dash-card">
-                            <div class="card-header">
-                                <h3 class="dash-title">EMISSÃO DE CO₂</h3>
-                                <i class="fa-solid fa-cloud text-muted"></i>
-                            </div>
-                            <h2 class="text-large">12.540 t</h2>
-                            <p class="subtitle">Últimas 24h</p>
+                    <h2 class="text-danger text-large">ALTO</h2>
+                    <p class="subtitle">Probabilidade de propagação</p>
+                    <div class="risk-meter">
+                        <span class="percentage">78%</span>
+                        <div class="meter-bar">
+                            <div class="meter-fill"></div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- rodape cards -->
-                    <div class="dash-bottom">
-                        <div class="dash-card mini">
-                            <div class="card-top">
-                                <h3 class="dash-title">FOCOS DE CALOR (24H)</h3>
-                            </div>
-                            <div class="card-body">
-                                <h2 class="card-title">127</h2>
-                                <p class="text-success text-small"><i class="fa-solid fa-arrow-trend-down"></i> -10% vs
-                                    ontem</p>
-                            </div>
-                        </div>
+                <div class="dash-card">
+                    <div class="card-header">
+                        <h3 class="dash-title">ALERTAS ATIVOS</h3>
+                        <i class="fa-solid fa-bell text-muted"></i>
+                    </div>
+                    <h2 class="text-large">27</h2>
+                    <p class="subtitle">+5 novos alertas</p>
+                </div>
 
-                        <div class="dash-card mini">
-                            <div class="card-top">
-                                <h3 class="dash-title">ÁREA QUEIMADA (HA)</h3>
-                            </div>
-                            <div class="card-body">
-                                <h2  class="card-title">8.392</h2>
-                                <p class="text-danger text-small"><i class="fa-solid fa-arrow-trend-up"></i> +15% vs
-                                    ontem</p>
-                            </div>
-                        </div>
+                <div class="dash-card">
+                    <div class="card-header">
+                        <h3 class="dash-title">EMISSÃO DE CO₂</h3>
+                        <i class="fa-solid fa-cloud text-muted"></i>
+                    </div>
+                    <h2 class="text-large">12.540 t</h2>
+                    <p class="subtitle">Últimas 24h</p>
+                </div>
+            </div>
 
-                        <div class="dash-card mini">
-                            <div class="card-top">
-                                <h3 class="dash-title">TENDÊNCIA</h3>
-                            </div>
-                            <div class="card-body">
-                                <h2 class="text-danger card-title"><i class="fa-solid fa-arrow-up"></i> AUMENTANDO</h2>
-                                <p class="subtitle text-small">Próximos 7 dias</p>
-                            </div>
-                        </div>
+            <div class="dash-bottom">
+                <div class="dash-card mini">
+                    <div class="card-top">
+                        <h3 class="dash-title">FOCOS DE CALOR (24H)</h3>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">127</h2>
+                        <p class="text-success text-small"><i class="fa-solid fa-arrow-trend-down"></i> -10% vs ontem</p>
+                    </div>
+                </div>
 
-                        <div class="dash-card mini">
-                            <div class="card-top">
-                                <h3 class="dash-title">SATÉLITES ATIVOS</h3>
-                            </div>
-                            <div class="card-body sat-body">
-                                <div>
-                                    <h2 class="card-title">18 / 18</h2>
-                                    <p class="subtitle text-small">Operacionais</p>
-                                </div>
-                            </div>
+                <div class="dash-card mini">
+                    <div class="card-top">
+                        <h3 class="dash-title">ÁREA QUEIMADA (HA)</h3>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">8.392</h2>
+                        <p class="text-danger text-small"><i class="fa-solid fa-arrow-trend-up"></i> +15% vs ontem</p>
+                    </div>
+                </div>
+
+                <div class="dash-card mini">
+                    <div class="card-top">
+                        <h3 class="dash-title">TENDÊNCIA</h3>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="text-danger card-title"><i class="fa-solid fa-arrow-up"></i> AUMENTANDO</h2>
+                        <p class="subtitle text-small">Próximos 7 dias</p>
+                    </div>
+                </div>
+
+                <div class="dash-card mini">
+                    <div class="card-top">
+                        <h3 class="dash-title">SATÉLITES ATIVOS</h3>
+                    </div>
+                    <div class="card-body sat-body">
+                        <div>
+                            <h2 class="card-title">18 / 18</h2>
+                            <p class="subtitle text-small">Operacionais</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+    <!-- historico -->
+    <section class="dash-panel" id="historyPanel">
+        <header class="dash-header history-header">
+            <div class="header-left">
+                <h2>HISTÓRICO DE URGÊNCIAS</h2>
+                <span class="update-time"><span class="dot"></span> Logs atualizados a cada 3 horas</span>
+            </div>
+
+            <div class="history-filter">
+                <label for="biomeFilter">Bioma</label>
+                <select id="biomeFilter" class="history-select">
+                    <option value="ambos">Ambos</option>
+                    <option value="amazonia">Amazônia</option>
+                    <option value="mata-atlantica">Mata Atlântica</option>
+                </select>
+            </div>
+        </header>
+
+        <section class="history-content">
+            <div class="history-summary">
+                <div class="dash-card history-summary-card">
+                    <h3 class="dash-title">URGÊNCIAS REGISTRADAS</h3>
+                    <h2 class="text-large">16</h2>
+                    <p class="subtitle">Últimas 24 horas</p>
+                </div>
+
+                <div class="dash-card history-summary-card">
+                    <h3 class="dash-title">RISCO CRÍTICO</h3>
+                    <h2 class="text-danger text-large">5</h2>
+                    <p class="subtitle">Ocorrências prioritárias</p>
+                </div>
+
+                <div class="dash-card history-summary-card">
+                    <h3 class="dash-title">TEMPO MÉDIO</h3>
+                    <h2 class="text-large">3h</h2>
+                    <p class="subtitle">Intervalo entre análises</p>
+                </div>
+            </div>
+
+            <div class="history-log-panel">
+                <div class="history-log-header">
+                    <h3>LOGS DE MONITORAMENTO</h3>
+                    <span>Intervalo: 3h em 3h</span>
+                </div>
+
+                <div class="history-log-list">
+                    <article class="history-log-item" data-biome="amazonia">
+                        <div class="history-time">
+                            <strong>00:00</strong>
+                            <span>Hoje</span>
+                        </div>
+
+                        <div class="history-marker danger"></div>
+
+                        <div class="history-info">
+                            <div class="history-info-header">
+                                <h4>Risco alto detectado</h4>
+                                <span class="history-tag tag-amazonia">Amazônia</span>
+                            </div>
+                            <p>Elevação térmica identificada próxima a uma área de vegetação densa. Recomendado acompanhamento imediato.</p>
+                        </div>
+
+                        <span class="history-status status-danger">Urgente</span>
+                    </article>
+
+                    <article class="history-log-item" data-biome="mata-atlantica">
+                        <div class="history-time">
+                            <strong>03:00</strong>
+                            <span>Hoje</span>
+                        </div>
+
+                        <div class="history-marker warning"></div>
+
+                        <div class="history-info">
+                            <div class="history-info-header">
+                                <h4>Variação climática moderada</h4>
+                                <span class="history-tag tag-mata">Mata Atlântica</span>
+                            </div>
+                            <p>Redução de umidade e aumento de temperatura registrados no raio analisado.</p>
+                        </div>
+
+                        <span class="history-status status-warning">Atenção</span>
+                    </article>
+
+                    <article class="history-log-item" data-biome="amazonia">
+                        <div class="history-time">
+                            <strong>06:00</strong>
+                            <span>Hoje</span>
+                        </div>
+
+                        <div class="history-marker danger"></div>
+
+                        <div class="history-info">
+                            <div class="history-info-header">
+                                <h4>Propagação provável</h4>
+                                <span class="history-tag tag-amazonia">Amazônia</span>
+                            </div>
+                            <p>Modelo preditivo aponta avanço em área próxima a comunidades ribeirinhas.</p>
+                        </div>
+
+                        <span class="history-status status-danger">Urgente</span>
+                    </article>
+
+                    <article class="history-log-item" data-biome="mata-atlantica">
+                        <div class="history-time">
+                            <strong>09:00</strong>
+                            <span>Hoje</span>
+                        </div>
+
+                        <div class="history-marker success"></div>
+
+                        <div class="history-info">
+                            <div class="history-info-header">
+                                <h4>Ocorrência estabilizada</h4>
+                                <span class="history-tag tag-mata">Mata Atlântica</span>
+                            </div>
+                            <p>Indicadores retornaram ao nível seguro após queda de temperatura e aumento de umidade.</p>
+                        </div>
+
+                        <span class="history-status status-success">Resolvido</span>
+                    </article>
+
+                    <article class="history-log-item" data-biome="amazonia">
+                        <div class="history-time">
+                            <strong>12:00</strong>
+                            <span>Hoje</span>
+                        </div>
+
+                        <div class="history-marker warning"></div>
+
+                        <div class="history-info">
+                            <div class="history-info-header">
+                                <h4>Nova área sob observação</h4>
+                                <span class="history-tag tag-amazonia">Amazônia</span>
+                            </div>
+                            <p>Satélites ativos identificaram anomalia térmica em zona de difícil acesso.</p>
+                        </div>
+
+                        <span class="history-status status-warning">Atenção</span>
+                    </article>
+
+                    <article class="history-log-item" data-biome="mata-atlantica">
+                        <div class="history-time">
+                            <strong>15:00</strong>
+                            <span>Hoje</span>
+                        </div>
+
+                        <div class="history-marker danger"></div>
+
+                        <div class="history-info">
+                            <div class="history-info-header">
+                                <h4>Alerta emergencial emitido</h4>
+                                <span class="history-tag tag-mata">Mata Atlântica</span>
+                            </div>
+                            <p>Risco elevado de foco de calor próximo a área habitada. Ação preventiva recomendada.</p>
+                        </div>
+
+                        <span class="history-status status-danger">Urgente</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
+            </div>
+        </div>
     </main>
+    <footer class="footer">
+        <p class="text-footer">© 2026 SENTRA. Todos os direitos reservados.</p>
+    </footer>
 </body>
 
 </html>
