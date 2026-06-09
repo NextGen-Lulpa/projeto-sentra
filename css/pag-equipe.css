@@ -1,7 +1,5 @@
 @import url('navbar.css');
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght=200..800&family=Inter:wght=300;400;600;700&display=swap');
-
-/* CONFIGURAÇÕES GLOBAIS E FUNDO */
 html {
     scroll-behavior: smooth;
 }
@@ -96,7 +94,7 @@ main {
 }
 
 
-/* SEÇÃO MEMBROS (GRADE E CARDS GLASSMORPHISM) */
+/* SEÇÃO MEMBROS */
 .equipe-membros {
     padding: 20px 40px 80px;
     max-width: 1400px;
@@ -112,7 +110,6 @@ main {
     margin: 0 auto;
 }
 
-/* Card Individual */
 .membro-card {
     position: relative;
     padding: 50px 30px 40px;
@@ -133,7 +130,6 @@ main {
     animation: fadeUpCard 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-/* Efeito card Interativo */
 .membro-efeito {
     position: absolute;
     inset: 0;
@@ -148,7 +144,6 @@ main {
     opacity: 1;
 }
 
-/* Efeitos Hover no Card */
 .membro-card:hover {
     border-color: rgba(255, 106, 0, 0.3);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 30px rgba(255, 106, 0, 0.15);
@@ -172,7 +167,6 @@ main {
     transform: scaleX(1);
 }
 
-/*Imagem de perfil dos Integrantes */
 .membro-avatar-wrapper {
     position: relative;
     width: 130px;
@@ -203,7 +197,6 @@ main {
     box-shadow: 0 10px 25px rgba(255, 106, 0, 0.25);
 }
 
-/* Informações dos Membros */
 .membro-info {
     position: relative;
     z-index: 2;
@@ -273,7 +266,6 @@ main {
     border-color: var(--laranja-primario);
 }
 
-/* Links Sociais */
 .membro-social {
     position: relative;
     z-index: 2;
@@ -329,7 +321,7 @@ main {
 }
 
 
-/* ANIMAÇÕES DE ENTRADA */
+/* ANIMAÇÕES*/
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -355,7 +347,6 @@ main {
 }
 
 /* RESPONSIVIDADE */
-/*Desktop*/
 @media (max-width: 1200px) {
     .membros-container {
         grid-template-columns: repeat(2, 1fr);
@@ -367,7 +358,6 @@ main {
     }
 }
 
-/* Tablets */
 @media (max-width: 900px) {
     main {
         padding-top: 80px;
@@ -387,7 +377,6 @@ main {
     }
 }
 
-/* Celulares */
 @media (max-width: 600px) {
     .membros-container {
         grid-template-columns: 1fr;

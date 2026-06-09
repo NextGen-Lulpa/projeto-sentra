@@ -1,4 +1,3 @@
-   /* IMPORTAÇÕES E CONFIGURAÇÕES GLOBAIS */
     @import url('navbar.css');
 
     html {
@@ -62,7 +61,6 @@
         overflow: hidden;
     }
 
-    /* Overlay escuro para melhorar a leitura dos textos */
     .hero::before {
         content: "";
         position: absolute;
@@ -71,7 +69,6 @@
         z-index: 1;
     }
 
-    /* Efeito de pontos decorativos */
     .hero::after {
         content: "";
         position: absolute;
@@ -82,7 +79,6 @@
         z-index: 1;
     }
 
-   /* ÁREA DE TEXTO DA HERO  */
     .hero-text {
         position: relative;
         z-index: 5;
@@ -90,7 +86,6 @@
         will-change: transform;
     }
 
-    /* Texto superior da hero */
     .hero-text-main {
         color: var(--laranja-primario);
         font-size: 12px;
@@ -99,7 +94,6 @@
         margin-bottom: 16px;
     }
 
-    /* Título principal */
     .titulo-principal {
         font-size: 62px;
         line-height: 1.05;
@@ -110,12 +104,10 @@
         color: var(--cor-branco);
     }
 
-    /* Destaque da palavra SENTRA */
     .text-sentra {
         color: var(--laranja-primario);
     }
 
-    /* Descrição do projeto */
     .hero-text .description {
         margin: 20px 0;
         color: var(--cor-cinza);
@@ -123,7 +115,6 @@
         line-height: 1.6;
     }
 
-   /* BOTÕES DE AÇÃO */
     .actions {
         display: flex;
         align-items: center;
@@ -131,8 +122,6 @@
         margin-top: 32px;
     }
 
-    /* Botão principal */
-    /* Botão secundário */
     .btn-primary,
     .btn-secondary {
         padding: 14px 22px;
@@ -151,7 +140,6 @@
         box-shadow: 0 0 15px rgba(255, 106, 0, 0.5);
     }
 
-    /* Botão principal animação de passar o mouse em cima */
     .btn-primary:hover {
         transform: translateY(-3px);
         box-shadow: 0 0 35px rgba(255, 106, 0, 0.45);
@@ -163,15 +151,11 @@
         color: var(--laranja-primario);
     }
 
-    /* Botão secondary animação de passar o mouse em cima */
     .btn-secondary:hover {
         transform: translateY(-3px);
         border-color: var(--laranja-primario);
         box-shadow: 0 0 22px rgba(255, 106, 0, 0.2);
     }
-
-
-   /* ÁREA VISUAL DA HERO */
 
     .hero-right {
         position: relative;
@@ -182,7 +166,6 @@
         gap: 35px;
     }
 
-    /* Container da imagem principal */
     .hero-media {
         position: relative;
         display: flex;
@@ -194,7 +177,6 @@
         will-change: transform;
     }
 
-    /* Imagem do astronauta */
     .hero-image {
         width: 550px;
         max-width: 100%;
@@ -268,7 +250,6 @@
         box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
     }
 
-    /* Card individual */
     .stat-item {
         position: relative;
         min-width: 190px;
@@ -297,7 +278,6 @@
         box-shadow: 0 0 25px rgba(255, 106, 0, 0.12), 0 10px 30px rgba(0, 0, 0, 0.25);
     }
 
-    /* Ícones dos cards */
     .stat-icon {
         display: flex;
         align-items: center;
@@ -319,7 +299,6 @@
         box-shadow: 0 0 25px rgba(255, 106, 0, 0.25);
     }
 
-    /* Informações dos Cards */
     .stat-info {
         display: flex;
         flex-direction: column;
@@ -342,7 +321,6 @@
         text-shadow: 0 0 10px rgba(255, 106, 0, 0.25), 0 0 22px rgba(255, 106, 0, 0.12);
     }
 
-    /* Link para visualizar todos os dados */
     .stats-link {
         position: relative;
         display: inline-block;
@@ -394,7 +372,6 @@
         animation: fadeUp 1s ease forwards;
     }
 
-    /* Botões de navegação rápida */
     .btn-plataforma {
         padding: 20px 45px;
         border-radius: 14px;
@@ -490,7 +467,6 @@
     }
 
    /* RESPONSIVIDADE */
-    /* Tablet */
     @media (max-width: 1100px) {
         .hero {
             flex-direction: column;
@@ -529,7 +505,6 @@
         }
     }
 
-    /* Celular */
     @media (max-width: 768px) {
         .hero {
             flex-direction: column;
@@ -584,7 +559,6 @@
         }
     }
 
-    /* Celular Pequeno */
     @media (max-width: 480px) {
         .titulo-principal {
             font-size: 28px;

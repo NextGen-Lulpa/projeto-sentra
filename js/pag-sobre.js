@@ -1,11 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Seleção dos elementos do DOM
   const bodyEl = document.body;
   const heroGlow = document.querySelector(".sobre-hero .hero-efeito");
   const heroContent = document.querySelector(".hero-content");
 
-
-  // 1. EFEITO PARALLAX DE FUNDO E HERO EFEITO
   let mouseX = 0;
   let mouseY = 0;
   let smoothX = 0;
@@ -16,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const centerX = window.innerWidth / 2;
     const centerY = window.innerHeight / 2;
 
-    // Fatores de movimentação (divisores controlam a amplitude)
     mouseX = (clientX - centerX) / 45;
     mouseY = (clientY - centerY) / 45;
   }
@@ -46,18 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
     smoothX += (mouseX - smoothX) * 0.08;
     smoothY += (mouseY - smoothY) * 0.08;
 
-    // 1. Parallax sutil no fundo espacial fixo do body
     if (bodyEl) {
       bodyEl.style.setProperty("--bg-parallax-x", `${smoothX * 0.25}px`);
       bodyEl.style.setProperty("--bg-parallax-y", `${smoothY * 0.25}px`);
     }
 
-    // 2. Parallax reverso no glow de luz orbital do Hero
     if (heroGlow) {
       heroGlow.style.transform = `translate3d(calc(-50% + ${-smoothX * 0.8}px), calc(-50% + ${-smoothY * 0.8}px), 0)`;
     }
 
-    // 3. Parallax sutil no bloco de texto principal do Hero
     if (heroContent) {
       heroContent.style.transform = `translate3d(${smoothX * 0.3}px, ${smoothY * 0.3}px, 0)`;
     }

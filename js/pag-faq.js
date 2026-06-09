@@ -1,15 +1,10 @@
-
-// INTERATIVIDADE DA PÁGINA FAQ (PARALLAX ORBITAL E ACCORDION)
 document.addEventListener("DOMContentLoaded", () => {
-  // Seleção dos elementos para o Parallax
   const bodyEl = document.body;
   const heroGlow = document.querySelector(".faq-hero .hero-efeito");
   const heroContent = document.querySelector(".hero-content");
 
-  // Se nenhum elemento do parallax existir, evita rodar o loop à toa
   const temParallax = bodyEl || heroGlow || heroContent;
 
-  // EFEITO PARALLAX DE FUNDO E HERO EFEITO
   let mouseX = 0;
   let mouseY = 0;
   let smoothX = 0;
@@ -61,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderParallax();
 
-  // ABRIR E FECHAR AS PERGUNTAS (ACCORDION)
+  // ABRIR E FECHAR AS PERGUNTAS
   const faqItems = document.querySelectorAll(".faq-item");
 
   faqItems.forEach((item) => {
@@ -96,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Ajusta dinamicamente o espaçamento da resposta aberta
         answer.style.paddingTop = "10px";
         answer.style.paddingBottom = "20px";
-        // Define a altura baseada no scroll real + padding adicionado manualmente
         answer.style.maxHeight = `${answer.scrollHeight + 30}px`;
       }
     });
