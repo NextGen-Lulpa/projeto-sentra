@@ -319,7 +319,7 @@
         box-shadow: 0 0 25px rgba(255, 106, 0, 0.25);
     }
 
-    /* Informações dos cards */
+    /* Informações dos Cards */
     .stat-info {
         display: flex;
         flex-direction: column;
